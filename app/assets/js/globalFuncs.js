@@ -69,7 +69,7 @@ define(['jquery', 'require'], function ($, require) {
 
 		data.name = name;
 		data.firstName = firstName;
-		data.firstEscaped = firstName.replace(/([$()*+.?\[^|\]])/g, '\\$1');
+		data.firstEscaped = firstName.replace(/[$()*+.?\[^|\]{}\/\\]/g, '\\$&');
 
 		return 'Hello, ' + name + '!';
 	};
